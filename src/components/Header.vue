@@ -8,7 +8,7 @@
       输入城市/景点/主题
     </div>
     <div class="header-right">
-      城市
+      {{ this.city }}
       <span class="iconfont arrow-icon">&#xe64a;</span>
     </div>
   </div>
@@ -16,50 +16,53 @@
 
 <script>
 export default {
-  name: "HomeHeader"
-};
+  name: 'HomeHeader',
+  props: {
+    city: String
+  }
+}
 </script>
 
 <style lang="stylus" scoped>
-@import '~@/assets/styles/varibles.styl';
+@import '~@/assets/styles/varibles.styl'
 
 .header {
-  display: flex;
-  line-height: 0.86rem;
-  background: #00bcd4;
-  color: #fff;
+  display: flex
+  line-height: 0.86rem
+  background: #00bcd4
+  color: #fff
 
   .header-left {
-    width: 0.64rem;
-    float: left;
+    width: 0.64rem
+    float: left
 
     .back-icon {
-      text-align: center;
-      font-size: 0.4rem;
+      text-align: center
+      font-size: 0.4rem
     }
   }
 
   .header-input {
-    flex: 1;
-    height: 0.64rem;
-    line-height: 0.64rem;
-    margin-top: 0.12rem;
-    margin-left: 0.2rem;
-    padding-left: 0.2rem;
-    background: #fff;
-    border-radius: 0.1rem;
-    color: #ccc;
+    flex: 1
+    height: 0.64rem
+    line-height: 0.64rem
+    margin-top: 0.12rem
+    margin-left: 0.2rem
+    padding-left: 0.2rem
+    background: #fff
+    border-radius: 0.1rem
+    color: #ccc
   }
 
   .header-right {
-    width: 1.24rem;
-    float: right;
+    width: 1.24rem
+    float: right
 
     .arrow-icon {
-      font-size: 0.24rem;
+      font-size: 0.24rem
     }
 
-    text-align: center;
+    text-align: center
   }
 }
 </style>

@@ -16,64 +16,20 @@
 <script>
 export default {
   name: 'HomeIcons',
+  props: {
+    list: Array
+  },
   data() {
     return {
-      iconList: [
-        {
-          id: '0001',
-          imgUrl:
-            'http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png',
-          desc: '景点门票'
-        },
-        {
-          id: '0002',
-          imgUrl:
-            'http://img1.qunarzz.com/piao/fusion/1711/df/86cbcfc533330d02.png',
-          desc: '滑雪季'
-        },
-        {
-          id: '0003',
-          imgUrl:
-            'http://img1.qunarzz.com/piao/fusion/1710/a6/83f636bd75ae6302.png',
-          desc: '泡温泉'
-        },
-        {
-          id: '0004',
-          imgUrl:
-            'http://img1.qunarzz.com/piao/fusion/1611/35/2640cab202c41b02.png',
-          desc: '动植园'
-        },
-        {
-          id: '0001',
-          imgUrl:
-            'http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png',
-          desc: '景点门票'
-        },
-        {
-          id: '0002',
-          imgUrl:
-            'http://img1.qunarzz.com/piao/fusion/1711/df/86cbcfc533330d02.png',
-          desc: '滑雪季'
-        },
-        {
-          id: '0003',
-          imgUrl:
-            'http://img1.qunarzz.com/piao/fusion/1710/a6/83f636bd75ae6302.png',
-          desc: '泡温泉'
-        },
-        {
-          id: '0004',
-          imgUrl:
-            'http://img1.qunarzz.com/piao/fusion/1611/35/2640cab202c41b02.png',
-          desc: '动植园'
-        }
-      ]
+      swiperOption: {
+        autoplay: false
+      }
     }
   },
   computed: {
     pages() {
       const pages = []
-      this.iconList.forEach((item, index) => {
+      this.list.forEach((item, index) => {
         const page = Math.floor(index / 8)
         if (!pages[page]) {
           pages[page] = []
