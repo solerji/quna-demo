@@ -15,7 +15,9 @@ export default {
 
 .search {
   height: 0.72rem
-  padding: 0.1rem
+  padding: 0.03rem
+  padding-left: 0.1rem
+  padding-right: 0.1rem
   background: $bgColor
 
   .search-input {
