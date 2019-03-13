@@ -30,8 +30,8 @@ export default {
       return letters
     }
   },
-  data: {
-    return: {
+  data() {
+    return {
       touchStatus: false,
       startY: 0,
       //优化，减少监听时间，函数节流
